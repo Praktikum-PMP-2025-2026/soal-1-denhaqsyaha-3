@@ -20,11 +20,12 @@ typedef struct Array {
 // Maksimal awal adalah 0
 
 void tambahArray (Array* temp, int n);
-
+    // Fungsi ini memperbarui ukuran array menjadi 1 integer lebih besar dari ukuran sebelumnya
+    // Sekaligus menambahkan n ke dalam array (di indeks terakhirnya)
 void sortinArray (Array* temp);
-
+    // Fungsi ini men-sorting array yang ada dalam struct Array
 float cariMedian (Array* temp);
-
+    // Fungsi ini mencari median dari array dalam struct Array yang sudah di-sorting
 int main (void) {
     Array dinamis;
     dinamis.arr = NULL;
@@ -74,7 +75,6 @@ void sortinArray (Array* temp) {
     for (int i = 0; i < (*temp).max; i++) {
         a[i] = ((*temp).arr)[i];
     }
-
     for (int i = 0; i < ((*temp).max) - 1; i++) {
         for (int j = i + 1; j < (*temp).max; j++) {
             if (a[i] > a[j]) {
