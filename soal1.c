@@ -46,7 +46,11 @@ int main (void) {
     for(int i = 0; i < dinamis.max; i++) {
         printf("%d ", (dinamis.arr)[i]);
     }
-    printf("MEDIAN %.2f", md);
+    if (dinamis.max % 2 == 0) {
+        printf("MEDIAN %.2f", md);
+    } else {
+        printf("MEDIAN %d", (int)md);
+    }
 
     return 0;
 }
